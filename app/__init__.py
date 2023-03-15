@@ -3,8 +3,6 @@ from app.config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
-print(app.config['SECRET_KEY'])
+# print(app.config['SECRET_KEY'])
 
-@app.route('/')
-def index():
-  return '<h1>Hello World. Sample App.</h1>'
+from app import routes
