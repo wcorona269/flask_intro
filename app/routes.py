@@ -7,9 +7,6 @@ from app import app
 def splash():
   return render_template('index.html', appname='footyhub')
 
-# @app.before_request
-# def before_request_function():
-#   print('before request function running')
 
 @app.route('/item/<int:id>')
 def item(id):
@@ -23,15 +20,27 @@ def item(id):
   else:
     return '<h1>Item Not Found</h1>'
 
+
+@app.route('/help')
+def help():
+  return '<h1></h1>'
+
+
+@app.route('/login')
+def login():
+  return render_template('login.html')
+
+
+# @app.before_request
+# def before_request_function():
+#   print('before request function running')
+
+
 # @app.after_request
 # def after_request_function(response):
 #     print("after_request is running")
 #     return response
 
-
-@app.route('/help')
-def help():
-  return '<h1></h1>'
 
 # @app.route('/about')
 # def about():
