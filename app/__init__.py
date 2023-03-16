@@ -6,3 +6,4 @@ app.config.from_object(Config)
 # print(app.config['SECRET_KEY'])
 
 from app import routes
+

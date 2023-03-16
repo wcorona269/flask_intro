@@ -1,10 +1,11 @@
+from flask import render_template
 from app import app
 
-
 @app.route('/')
-@app.route('/splash')
+@app.route('/index')
+@app.route('/main')
 def splash():
-  return render_template('index.html')
+  return render_template('index.html', appname='footyhub')
 
 # @app.before_request
 # def before_request_function():
